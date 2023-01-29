@@ -1,0 +1,22 @@
+main {
+    margin: 0 100px;
+}
+
+.Banner {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 350px;
+    border-radius: 25px
+}
+.Banner > span {
+    position: absolute;
+    z-index: 3;
+    color: #fff;
+    font-size: 55px;
+    font-weight: 700;
+}
+.Banner > img {
+    filter: brightness(70%);
+    border-radius: 25px;
+}
