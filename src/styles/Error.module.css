@@ -1,0 +1,32 @@
+.error_main {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #FF6060;
+}
+
+.error_main > h1 {
+    font-size: 200px;
+}
+
+.error_main > p {
+    margin: 20px;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.error_main button {
+    margin: 100px;
+    text-decoration: underline;
+    color: #FF6060;
+    line-height: 25px;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+}
+
+.error_main button:hover {
+    cursor: pointer;
+}

@@ -1,44 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .footer {
+    padding: 20px;
+    margin-top: 60px;
+    height: 150px;
+    background-color: #000;
+    display: grid;
+    place-items: center;
 
-    position: relative;
-    /*width: 1440px;*/
-    height: 209px;
-    top: 4333px;
-
-    background: #000000;
 }
+
 
 .footer > span {
-    position: absolute;
-    left: 39.15%;
-    right: 32.22%;
-    top: 64.11%;
-    bottom: 13.88%;
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 142.6%;
-
-    display: flex;
-    align-items: flex-end;
-    text-align: center;
-
-    color: #FFFFFF;
-}
-
-.footer > img {
-    position: absolute;
-    width: 122px;
-    height: 39.44px;
-    left: 45.76%;
-    right: 45.76%;
-    top: 31.58%;
-    bottom: 49.55%;
+    color: #fff;
+    font-size: 24px;
 }

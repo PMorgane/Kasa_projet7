@@ -3,10 +3,9 @@ main {
 }
 
 .Banner {
-    position: relative;
     display: grid;
     place-items: center;
-    height: 350px;
+    height: 220px;
     border-radius: 25px
 }
 .Banner > span {
