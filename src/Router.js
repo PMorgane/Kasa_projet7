@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 //import About from "./pages/About";
 import Housing from "./pages/Housing";
 import Error from "./pages/Error";
-
+import About from "./pages/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
@@ -19,9 +19,10 @@ function Router() {
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="*" element={<Error />} />
+                <Route path="/" element={<Home />} /> 
                 <Route path="/housing/:id" element={<Housing />} />
+                <Route path="/about" element={<About />} />
+                <Route path="*" element={<Error />} />
             </Routes>
             <Footer />
         </BrowserRouter>
