@@ -5,7 +5,7 @@ import Cards from "../components/Cards";
 
 const Home = () => {
     return (
-        <main className={style.Container}>
+        <main>
             <Banner />
             <Cards />
         </main>

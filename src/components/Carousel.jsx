@@ -1,41 +1,42 @@
 import React, { useState } from "react";
 import style from "../styles/Housing.module.css";
-
+import Vector from "../assets/Vector.png"
 
 
 const Carousel = ({ dataHousing }) => {
     let array = [];
-   const numberPictures = dataHousing.pictures.length;
-   array.push(numberPictures); 
-   console.log(numberPictures);
-   console.log(array);
-    //numberPictures.forEach(pictures => console.log(pictures))
-    console.log(dataHousing);
-    const [count, setCount] = useState(0);
-  
-    
-    const handleClickRigth = function (e) {
-        /*if (e > array){
-            return (count)
-        }*/
-        e.preventDefault(); 
-        setCount(c => c + 1) 
-        
-    }
-    const handleClickLeft = function (e) {
-        e.preventDefault();
-        //if (numberPictures < 0 ){ }
-        setCount(c => c - 1)
-    }
-    
+    const numberPictures = dataHousing.pictures.length;
+    array.push(numberPictures);
     console.log(numberPictures);
-    return (
-        <div>
-            <img src={dataHousing.pictures[count]} alt={dataHousing.title} />
-            <button onClick={handleClickLeft}>Incremente{count}</button>
-            <button onClick={handleClickRigth}>Incremente{count}</button>
+    const [count, setCount] = useState(0);
 
-        </div>
+
+    const handleClickRigth = (e) => {
+        if (count === 0 ) {
+            setCount(numberPictures -1)
+        }
+        else {
+            setCount(count -1)
+        }
+        return (setCount)
+    }
+    const handleClickLeft = (e) => {
+        if(count === numberPictures - 1) {
+            setCount(numberPictures = 0 )
+        } else {
+            setCount(count + 1)
+        }
+        return(setCount);
+
+    }
+
+    
+    return (
+        <section className={style.Carousel}>
+            <div ><img src={Vector} onClick={handleClickLeft}/></div>
+            <div className={style.imgCarousel}><img src={dataHousing.pictures[count]} alt={dataHousing.title} /></div>
+            <div><img src={Vector} onClick={handleClickRigth}/></div>
+        </section>
     )
 }
 export default Carousel;

@@ -1,21 +1,31 @@
-main {
-    margin: 0 100px;
-}
 
 .Banner {
-    display: grid;
-    place-items: center;
-    height: 220px;
-    border-radius: 25px
+    border-radius: 25px;
+    height: 225px;
+    margin-bottom: 35px;
+    position: relative;
 }
 .Banner > span {
+    color: #ffffff;
+    font-size: 48px;
+    left: 50%;
     position: absolute;
-    z-index: 3;
-    color: #fff;
-    font-size: 55px;
-    font-weight: 700;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 .Banner > img {
     filter: brightness(70%);
     border-radius: 25px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
+
+
+@media screen and (max-width: 1490px) {
+    .banner > span {
+      font-size: 20px;
+      left: 15px;
+      transform: translateY(-50%);
+    }
+  }
