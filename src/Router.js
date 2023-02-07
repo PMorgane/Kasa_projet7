@@ -11,8 +11,8 @@ import Error from "./pages/Error";
 import About from "./pages/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Banner from "./components/Banner";
-import Cards from "./components/Cards";
+//import Banner from "./components/Banner";
+//import Cards from "./components/Cards";
 
 function Router() {
     return (

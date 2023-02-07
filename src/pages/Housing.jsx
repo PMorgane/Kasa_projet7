@@ -1,11 +1,14 @@
 import React from "react";
 import style from "../styles/Housing.module.css";
-import { useFetch } from "../components/hooks/useFetch";
+import { useFetch } from "../components/hooks/useFetch.jsx";
 import Carousel from "../components/Carousel";
-
-import Dropdown from "../components/Dropdown";
-import Tags from "../components/Tags";
+import Rating from "../components/Rating";
+import Dropdown from "../components/Dropdown.jsx";
+import Tags from "../components/Tags.jsx";
 import { useParams } from "react-router-dom";
+
+import starsCompleted from "../assets/starsCompleted.png";
+import starsEmpty from "../assets/starsEmpty.png";
 
 
 const Housing = () => {
@@ -13,8 +16,25 @@ const Housing = () => {
     const { data } = useFetch("../data.json");
     const { id } = useParams();
     const housingId = id;
-    
+
     const dataHousing = data.filter((el) => el.id === housingId);
+
+    //rating
+    /*const starsRating = [1, 2, 3, 4, 5];
+    starsRating.map((el)=> (el => el.starsRating))
+*/  /* Notes */
+    let noteLogement = [];
+    let etoileComplete = true;
+    for (let index = 0; index < 5; index++) {
+        if (index === parseInt(dataHousing?.rating)) {
+            etoileComplete = false;
+        }
+        if (etoileComplete === true) {
+            noteLogement.push(<img key={index} className="etoile" src={starsCompleted} alt={`${dataHousing?.rating}/5`} />)
+        } else {
+            noteLogement.push(<img key={index} className="etoile" src={starsEmpty} alt={`${dataHousing?.rating}/5`} />)
+        }
+    }
 
     return (dataHousing.map((el) => (
 
@@ -34,12 +54,14 @@ const Housing = () => {
                             alt={"Propriétaire " + el.host.name}
                         />
                     </div>
-                
-                <Tags dataHousing = {el} />
+
+                    <Tags title='tags'/><ul><li>{el?.tags}</li></ul>
+                    <div className="rating">{noteLogement}</div>
                 </article>
-                <div className={style.rating}>
-                    <span>{el.rating} stars</span> </div>
-                <Dropdown dataHousing={el} />
+
+
+                <Dropdown title="Description" description={el?.description} />
+                <Dropdown title="Équipements" description={el?.equipments} />
 
 
             </div>

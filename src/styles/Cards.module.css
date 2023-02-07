@@ -16,12 +16,14 @@
  
 
 .cards > .article {
+    height: 340px;
+    width: 340px;
     position: relative;
     display: flex;
     flex-flow: row;
     width: 33%;
     border-radius: 10px;
-    z-index: 4;
+    z-index: 0;
 
 }
 
@@ -36,12 +38,12 @@
     z-index: 2;
 }
 
-.article > .titleLocation {
-    position: absolute;
+.titleLocation {
+
     bottom: 30px;
     left: 15px;
     width: 180px;
-    color: #fff;
-    font-weight: 500;
-    z-index: 4;
+    color: black;
+    font-weight: 700;
+    z-index: 10;
 }

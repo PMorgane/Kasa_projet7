@@ -1,21 +1,22 @@
-import React, { useEffect, useState} from "react";
-//import style from "../styles/tags.module.css";
-import style from "../styles/Tags.module.css";
+//import React, {useState} from "react";
 
 
-const Tag = ({dataHousing}) => {
-    console.log(dataHousing);
-    // {dataHousing}.map((el)=> (
-    return (
-        
-        <div className={style.tags}>
-        <ul>
-            <li>{dataHousing.tags}</li>
-        </ul>
-    </div>
 
+function Tags ({title, description}){
 
+    return(
+        <div className="tags" id={`tags-${title}`}>
+            <div className="header-tags">
+                <div className="title-dropdown">{title}</div>
+    
+            </div>
+            
+                <div className="description-tags" id={`tags-${description}`}></div>
+            
+        </div>
     );
 };
 
-export default Tag;
+
+
+export default Tags;

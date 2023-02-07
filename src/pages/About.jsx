@@ -1,27 +1,24 @@
 import React from "react";
 import style from "../styles/About.module.css";
 import imgApropos from "../assets/imgApropos.png";
-import { useParams } from "react-router-dom";
-import { useFetch } from "../components/hooks/useFetch";
-
+//import { useParams } from "react-router-dom";
+//import { useFetch } from "../components/hooks/useFetch";
+import Dropdown from "../components/Dropdown";
 
 function About() {
-   // const { Apropos } = useFetch("../apropos.json");
+    // const { Apropos } = useFetch("../apropos.json");
     //const {id} = useParams();
-   // console.log(Apropos);
-   //const dataAbout = propos.filter((el) => el.id === aproposId);
+    // console.log(Apropos);
+    //const dataAbout = propos.filter((el) => el.id === aproposId);
 
     return (//dataAbout.map((el) => (
         <><header className={style.Apropos}>
             <img src={imgApropos} alt="image Apropos" />
         </header>
             <main className={style.main}>
-                <div>
-                    <article>
-                    <h2></h2>
-                    <p></p>
-                    </article>
-                </div>
+                <Dropdown title="Respect" description="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />
+                <Dropdown title="Service" description="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question." />
+                <Dropdown title="Sécurité" description="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes." />
 
             </main></>
     );
