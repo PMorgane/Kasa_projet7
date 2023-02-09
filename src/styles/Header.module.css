@@ -1,9 +1,9 @@
-* {
+*{
     margin: 0;
-    padding:0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
 }
-
-
 .header {
     color: #FF6060;
     height: 70px;
@@ -24,12 +24,14 @@
     justify-content: space-between;
 }
 
-.header > a {
-    font-size: 44px;
-
+.linkActive, .link {
+    font-size: 25px;
+    color: #FF6060;
     text-align: end;
     min-width: 140px;
     font-weight: 500;
-    color: #FF6060;
-    
+   /* text-transform: uppercase;*/
+}
+.linkActive {
+    text-decoration: underline;
 }

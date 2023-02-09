@@ -3,15 +3,25 @@ import style from "../styles/Dropdown.module.css";
 import Vector from "../assets/Vector.png";
 
 
-function Dropdown ({title, description}){
+function Dropdown ({title, description, liste}){
+    
     const [open, setOpen] = useState(false);
-
+/*
+    console.log(liste);
+    let listEquipment=liste.map((el)=>{
+        // <li className={style.liste} key= {Math.random()}> {el}</li>
+        return console.log(el)
+    }
+        
+    )}
+    console.log(listEquipment);
+    }*/
     return(
-        <section className={style.dropdown} id={`dropdown-${title}`}>
+        <section className={style.description} id={`dropdown-${title}`}>
             <div className={style.header}>
                 <div className={style.title}>{title}</div>
-                <span className={`Vector-dropdown ${open}`} onClick={() => setOpen(!open)}>
-                    <img src={Vector} alt="Ouvrir cette liste"/>
+                <span className={style.VectorTrue} id={`Vector-dropdown ${open}`} onClick={() => setOpen(!open)}>
+                    <img className={open? style.VectorOpen:style.VectorClose} src={Vector} alt="Ouvrir cette liste"/>
                 </span>
             </div>
             {

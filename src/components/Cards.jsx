@@ -13,7 +13,7 @@ function Cards() {
                 to={`housing/${el.id}`}
                 className={style.card}
             >
-                <article>
+                <article className={style.post}>
                     <img
                         className={style.imgCard}
                         src={el.cover}

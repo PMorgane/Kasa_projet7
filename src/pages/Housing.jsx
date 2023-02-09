@@ -7,8 +7,6 @@ import Dropdown from "../components/Dropdown.jsx";
 import Tags from "../components/Tags.jsx";
 import { useParams } from "react-router-dom";
 
-import starsCompleted from "../assets/starsCompleted.png";
-import starsEmpty from "../assets/starsEmpty.png";
 
 
 const Housing = () => {
@@ -18,53 +16,34 @@ const Housing = () => {
     const housingId = id;
 
     const dataHousing = data.filter((el) => el.id === housingId);
-
-    //rating
-    /*const starsRating = [1, 2, 3, 4, 5];
-    starsRating.map((el)=> (el => el.starsRating))
-*/  /* Notes */
-    let noteLogement = [];
-    let etoileComplete = true;
-    for (let index = 0; index < 5; index++) {
-        if (index === parseInt(dataHousing?.rating)) {
-            etoileComplete = false;
-        }
-        if (etoileComplete === true) {
-            noteLogement.push(<img key={index} className="etoile" src={starsCompleted} alt={`${dataHousing?.rating}/5`} />)
-        } else {
-            noteLogement.push(<img key={index} className="etoile" src={starsEmpty} alt={`${dataHousing?.rating}/5`} />)
-        }
-    }
-
     return (dataHousing.map((el) => (
 
-        <main key={el.toString}>
+        <main>
             <Carousel dataHousing={el} />
-            <div key={el.id} className={style.description}>
-                <article>
-                    <h1>{el.title}</h1>
-                    <p>{el.location}</p>
 
+            <div className={style.info}>
+                <article className='description'>
+                    <h1 className={style.title}>{el.title}</h1>
+                    <p className={style.text}>{el.location}</p>
+                    <Tags tags={el.tags} />
                 </article>
-                <article className={style.owner}>
-                    <div className={style.infosOwner}>
+                <article className={style.owners}>
+                    <div className={style.ownersInfo}>
                         <p>{el.host.name}</p>
-                        <img
+                        <img className={style.imgOwner}
                             src={el.host.picture}
                             alt={"Propriétaire " + el.host.name}
                         />
                     </div>
-
-                    <Tags title='tags'/><ul><li>{el?.tags}</li></ul>
-                    <div className="rating">{noteLogement}</div>
+                    <div>< Rating ratingStars={el.rating} /></div>
                 </article>
-
-
-                <Dropdown title="Description" description={el?.description} />
-                <Dropdown title="Équipements" description={el?.equipments} />
-
-
             </div>
+            <div className={style.containerDropdown}>
+                <Dropdown title="Description" description={el.description} />
+                <Dropdown title="Équipements" description={el.equipments} liste={el.equipments} />
+            </div>
+
+
         </main>
 
     )));

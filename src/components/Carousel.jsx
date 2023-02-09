@@ -4,20 +4,21 @@ import Vector from "../assets/Vector.png"
 import style from "../styles/Carousel.module.css";
 
 const Carousel = ({ dataHousing }) => {
-    let array = [];
+     const [count, setCount] = useState(1);
+     let array = [];
     const numberPictures = dataHousing.pictures.length;
     array.push(numberPictures);
-    const [count, setCount] = useState(0);
-    const handleClickRigth = (e) => {
-        if(count === numberPictures +1){
-            setCount (numberPictures=0)
+   
+    function handleClickRigth (e) {
+        if(count === numberPictures ){
+            setCount (1)
         }else {
-            setCount(count - 1)
+            setCount(count + 1)
         }return (setCount)
     }
     function handleClickLeft (e) {
-       if (count === 0 ) {
-        setCount(numberPictures -1)
+       if (count === 1 ) {
+        setCount(numberPictures)
     }
     else {
         setCount(count -1)
@@ -27,9 +28,11 @@ const Carousel = ({ dataHousing }) => {
     console.log(numberPictures);
     return (
         <section className={style.Carousel}>
-            <div ><img className={style.Vector} src={Vector} onClick={handleClickLeft}/></div>
-            <div className={style.imgCarousel}><img src={dataHousing.pictures[count]} alt={dataHousing.title} /></div>
-            <div><img className={style.Vector} src={Vector} onClick={handleClickRigth}/></div>
+            <div ><img className={style.VectorLeft} src={Vector} onClick={handleClickLeft}/></div>
+            <div className={style.imgCarousel}><img src={dataHousing.pictures[count-1]} alt={dataHousing.title} />
+            <span>{count} / {numberPictures}</span>
+            </div>
+            <div><img className={style.VectorRight} src={Vector} onClick={handleClickRigth}/></div>
         </section>
     )
 }

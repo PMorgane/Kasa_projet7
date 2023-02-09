@@ -1,19 +1,12 @@
-//import React, {useState} from "react";
-
-
-
-function Tags ({title, description}){
+import React from "react";
+import style from "../styles/Housing.module.css"
+function Tags ({tags}){
+    const elementTags = tags.map((el)=>(
+        <span className={style.tag} key= {Math.random()}>{el}</span>
+    ))
 
     return(
-        <div className="tags" id={`tags-${title}`}>
-            <div className="header-tags">
-                <div className="title-dropdown">{title}</div>
-    
-            </div>
-            
-                <div className="description-tags" id={`tags-${description}`}></div>
-            
-        </div>
+            <div className={style.containerTag} >{elementTags}</div>
     );
 };
 

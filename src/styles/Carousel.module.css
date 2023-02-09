@@ -3,21 +3,34 @@
     width: 100%;
     border-radius: 25px;
     display: flex;
+    position: relative;
     flex-direction: row;
     margin-bottom: 45px;
 }
 
-.Vector {
+.VectorLeft {
     position: absolute;
     height: 50px;
-    z-index: 2;
+    z-index: 4;
     top: 50%;
     bottom: 50%;
     cursor: pointer;
+    background: red;
+    transform: rotate(180deg);
 }
-.VectorDisplayNone {
+.VectorRight {
+position: absolute;
+    height: 50px;
+    z-index: 5;
+    top: 50%;
+    bottom: 50%;
+    cursor: pointer;
+    background: red;
+}
+
+/*.VectorDisplayNone {
     display: none;
-}
+}*/
 .handleClickLeft {
     transform: rotate(90deg) translate(-50%, -50%);
 }

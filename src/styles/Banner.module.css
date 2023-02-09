@@ -2,7 +2,6 @@
 .Banner {
     border-radius: 25px;
     height: 225px;
-    padding: 0 100px 0 100px;
     position: relative;
 }
 .Banner > span {
