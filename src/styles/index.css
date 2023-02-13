@@ -7,7 +7,11 @@
     font-family: "Montserrat", "Segoe UI", "Roboto", "Oxygen", "Helvetica Neue",
         sans-serif;
 }
-body {
-    padding: 0 100px 0 100px;
-}
 
+main {
+    margin: 25px 50px;
+}
+@media screen and (min-width: 360px) and (max-width: 850px) {
+header, main {
+    padding: 0 ;
+}}

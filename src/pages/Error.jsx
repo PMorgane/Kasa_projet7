@@ -12,7 +12,7 @@ const Error = () => {
                 aria-label="ouppss, page non trouvée. Cliquez sur le bouton ci-dessous pour retourner à l'accueil">
                 404
             </h1>
-            <p>Oups! La page que vous demandez n'existe pas.</p>
+            <p>Oups! La page que <br></br> vous demandez n'existe pas.</p>
             <NavLink to="/">
                 <button>Retourner sur la page d'accueil</button>
             </NavLink>

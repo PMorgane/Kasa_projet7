@@ -35,12 +35,12 @@ const Housing = () => {
                             alt={"Propriétaire " + el.host.name}
                         />
                     </div>
-                    <div>< Rating ratingStars={el.rating} /></div>
+                    <div className={style.containerStars}>< Rating ratingStars={el.rating} /></div>
                 </article>
             </div>
             <div className={style.containerDropdown}>
                 <Dropdown title="Description" description={el.description} />
-                <Dropdown title="Équipements" description={el.equipments} liste={el.equipments} />
+                <Dropdown title="Équipements" liste={el.equipments} />
             </div>
 
 

@@ -1,13 +1,42 @@
-.Apropos{
+.Apropos {
     border-radius: 25px;
     height: 225px;
-    padding: 0 100px 0 100px;
+    width: 100%;
+    margin-bottom: 30px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .imgApropos {
     filter: brightness(70%);
     border-radius: 25px;
     height: 100%;
-    object-fit: cover;
-    width: 100%;
+
+    width: 93%;
+}
+.mainDropdown {
+    width: 80%;
+    margin: 0 10%;
+  }
+
+@media screen and (max-width: 408px) and (min-width:0px) {
+    .Apropos {
+       width: 80%;
+       margin: 0 10%;
+      background-position: 50%;
+        background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(30, 29, 29, 0.325)),
+            url("../assets/bannerApropos.png");
+        background-repeat: no-repeat;
+
+        border-radius: 10px;
+    }
+
+    .imgApropos {
+        display: none;
+    
+        
+    }
+
 }

@@ -1,5 +1,5 @@
 .Carousel {
-    height: 420px;
+    /*height: 420px;*/
     width: 100%;
     border-radius: 25px;
     display: flex;
@@ -15,7 +15,7 @@
     top: 50%;
     bottom: 50%;
     cursor: pointer;
-    background: red;
+
     transform: rotate(180deg);
 }
 .VectorRight {
@@ -23,9 +23,10 @@ position: absolute;
     height: 50px;
     z-index: 5;
     top: 50%;
+    right: 0;
     bottom: 50%;
     cursor: pointer;
-    background: red;
+ 
 }
 
 /*.VectorDisplayNone {
@@ -56,7 +57,7 @@ position: absolute;
     object-fit: cover;
 }
 /* span */
-.counter {
+.compteur {
     color: #fff;
     font-weight: 500;
     position: absolute;
@@ -68,33 +69,33 @@ position: absolute;
 }
 
 @media screen and (min-width: 0px) and (max-width: 430px) {
-    .carrousel {
+    .Carousel {
         height: 320px;
         margin-bottom: 15px;
     }
-    .imageCentral,
-    .imageCentral > img {
+    .imgCarousel,
+    .imgCarousel > img {
         height: 320px;
         border-radius: 10px;
     }
-    .arrows {
+    .Vector {
         height: 20px;
     }
-    .counter {
+    .compteur {
         display: none;
     }
 }
 
 @media screen and (min-width: 431px) and (max-width: 992px) {
-    .carrousel {
-        height: 330px;
+    .carousel {
+        height: auto;
         margin-bottom: 30px;
     }
-    .arrows {
+    .Vector {
         height: 20px;
     }
-    .imageCentral,
-    .imageCentral > img {
+    .imgCarousel,
+    .imgCarousel > img {
         height: 330px;
     }
 }

@@ -13,3 +13,8 @@
     color: #fff;
     font-size: 24px;
 }
+@media screen and (min-width: 360px) and (max-width: 1000px) {
+    .footer > span{
+        font-size: 16px;
+    }
+}

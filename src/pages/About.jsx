@@ -15,7 +15,7 @@ function About() {
         <><header className={style.Apropos}>
             <img className= {style.imgApropos} src={imgApropos} alt="image Apropos" />
         </header>
-            <main className={style.main}>
+            <main className={style.mainDropdown}>
                 <Dropdown title="Fiabilité" description="Les annonces postées sur Kasa garantissent une fiabilité total. Les photos sont conormes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes. " />
                 <Dropdown title="Respect" description="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />
                 <Dropdown title="Service" description="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question." />

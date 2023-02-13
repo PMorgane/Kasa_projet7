@@ -1,60 +1,82 @@
 
 
-
 section {
-    border-radius: 5px;
-    margin-bottom: 35px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .header{
-    align-items: center;
-    background-color: #ff6060;
-    border-radius: 5px;
-    display: inline-flex;
-    height: 25%;
-    min-height: 50px;
-    width: 100%;
-    justify-content: space-between;
-  }
+  border-radius: 5px;
+  margin-bottom: 35px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  align-items: center;
+  background-color: #ff6060;
+  border-radius: 5px;
+  display: inline-flex;
+  height: 40px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 500;
+  color: #ffffff;
+  height: 50px;
+  line-height: 50px;
+  margin: 5px 10px;
+}
+
+.header > span{
+  margin: 5px 20px;
+}
+
+.VectorClose,
+.VectorOpen {
+
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  width: 100%;
+  cursor: pointer;
+  height: 15px;
+  transform: rotate(90deg);
+}
+
+.VectorOpen {
+  transform: rotate(-90deg);
+}
+
+.VectorTrue.true:hover {
+  justify-content: start;
+  transform: rotate(+90deg);
+
+}
+
+
+.description {
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #ff6060;
+  height: auto;
+  margin-top: 15px;
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+.descriptionDropdown {
+  padding: 30px;
  
-  .title {
-    color: #ffffff;
-    height: 50px;
-    line-height: 50px;
-    margin: 5px 10px;
-  }
-  
-  .VectorClose, .VectorOpen{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 10px;
-    width: 100%;
-    cursor: pointer;
-    height: 15px;
-    transform: rotate(90deg);
-  }
-  .VectorOpen {
-    transform: rotate(-90deg);
-  }
- .VectorTrue.true:hover {
-      justify-content: start;
-      transform: rotate(+90deg);
-    
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 800px) {
+
+  .Vector {
+    flex-direction: column;
+    margin-top: 75px;
+
   }
 
-  
-  .description{
-    display: flex;
-    flex-direction: column;
-   
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    color: #ff6060;
-    height: 35px;
-    margin-top: -10px;
-    width: 50%;
-   
-  }
+}
