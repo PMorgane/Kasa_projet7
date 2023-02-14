@@ -7,23 +7,23 @@ function Cards() {
     const { data } = useFetch("../data.json");
     return (
         <section className={style.cards}>
-        {data.map((el) => (
-            <NavLink
-                key={el.id}
-                to={`housing/${el.id}`}
-                className={style.card}
-            >
-                <article className={style.post}>
-                    <img
-                        className={style.imgCard}
-                        src={el.cover}
-                        alt={el.title}
-                    />
-                    <p className={style.titleLocation}>{el.title}</p>
-                </article>
-            </NavLink>
-        ))}
-    </section>
-);
+            {data.map((el) => (
+                <NavLink
+                    key={el.id}
+                    to={`housing/${el.id}`}
+                    className={style.card}
+                >
+                    <article className={style.post}>
+                        <img
+                            className={style.imgCard}
+                            src={el.cover}
+                            alt={el.title}
+                        />
+                        <p className={style.titleLocation}>{el.title}</p>
+                    </article>
+                </NavLink>
+            ))}
+        </section>
+    );
 }
 export default Cards;

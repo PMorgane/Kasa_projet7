@@ -1,70 +1,52 @@
-/*.Banner {
+.Banner {
   border-radius: 25px;
   height: 225px;
+  margin-bottom: 35px;
   position: relative;
-  margin: 20px 0 40px;
 }
 
-*/
-.Banner>span {
-  display: flex;
-  flex-wrap: nowrap;
-  color: #fff;
-  font-size: 45px;
-  font-weight: 500;
-  left: 48%;
-  position: absolute;
-  top: 60%;
-  transform: translate(-50%, -50%);
-}
-
-.Banner > img {
+.Banner>img {
   filter: brightness(70%);
-  display: grid;
-  place-items: center;
-  height: 220px;
   border-radius: 25px;
+  height: 100%;
+  object-fit: cover;
   width: 100%;
 }
 
-/*
-@media screen and (max-width: 1024px) {
 
-  .Banner > span {
-    left: 399px;
+.Banner>p {
+  color: #ffffff;
+  font-size: 48px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 950px) {
+  .Banner>img {
+    display: none;
   }
 
-}
-@media screen and (max-width: 800px) {
-  .Banner > span{
-  left: 162px;}
-}*/
-@media screen and (min-width: 360px) and (max-width: 1000px) {
-
   .Banner {
-
-    height: 115px;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(30, 29, 29, 0.325)),
       url("../assets/bannerMobil.png");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 9px;
-    margin:0 0 20px;
 
   }
 
-  .Banner>span {
-    min-width: 65%;
-    font-size: 25px;
-    top: 22%;
-    width: 55%;
-    left: 40%;
-
-    
+  .Banner>p {
+    font-size: 37px;
   }
+}
 
-  .Banner>img {
-
-    display: none;
+@media screen and (max-width: 550px) {
+  .Banner>p {
+    font-size: 27px;
+    left: 30px;
+    transform: translateY(-50%);
   }
 }

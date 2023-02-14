@@ -1,5 +1,5 @@
 .Carousel {
-    /*height: 420px;*/
+
     width: 100%;
     border-radius: 25px;
     display: flex;
@@ -18,20 +18,18 @@
 
     transform: rotate(180deg);
 }
+
 .VectorRight {
-position: absolute;
+    position: absolute;
     height: 50px;
     z-index: 5;
     top: 50%;
     right: 0;
     bottom: 50%;
     cursor: pointer;
- 
+
 }
 
-/*.VectorDisplayNone {
-    display: none;
-}*/
 .handleClickLeft {
     transform: rotate(90deg) translate(-50%, -50%);
 }
@@ -48,14 +46,16 @@ position: absolute;
     width: 100%;
     border-radius: 25px;
 }
+
 /* img */
 
-.imgCarousel > img {
+.imgCarousel>img {
     height: 420px;
     width: 100%;
     border-radius: 25px;
     object-fit: cover;
 }
+
 /* span */
 .compteur {
     color: #fff;
@@ -73,14 +73,17 @@ position: absolute;
         height: 320px;
         margin-bottom: 15px;
     }
+
     .imgCarousel,
-    .imgCarousel > img {
+    .imgCarousel>img {
         height: 320px;
         border-radius: 10px;
     }
+
     .Vector {
         height: 20px;
     }
+
     .compteur {
         display: none;
     }
@@ -91,11 +94,13 @@ position: absolute;
         height: auto;
         margin-bottom: 30px;
     }
+
     .Vector {
         height: 20px;
     }
+
     .imgCarousel,
-    .imgCarousel > img {
+    .imgCarousel>img {
         height: 330px;
     }
 }

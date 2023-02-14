@@ -6,14 +6,10 @@ import imgApropos from "../assets/imgApropos.png";
 import Dropdown from "../components/Dropdown";
 
 function About() {
-    // const { Apropos } = useFetch("../apropos.json");
-    //const {id} = useParams();
-    // console.log(Apropos);
-    //const dataAbout = propos.filter((el) => el.id === aproposId);
 
-    return (//dataAbout.map((el) => (
+    return (
         <><header className={style.Apropos}>
-            <img className= {style.imgApropos} src={imgApropos} alt="image Apropos" />
+            <img className={style.imgApropos} src={imgApropos} alt="image Apropos" />
         </header>
             <main className={style.mainDropdown}>
                 <Dropdown title="Fiabilité" description="Les annonces postées sur Kasa garantissent une fiabilité total. Les photos sont conormes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes. " />

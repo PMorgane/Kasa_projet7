@@ -18,10 +18,10 @@ const Housing = () => {
     const dataHousing = data.filter((el) => el.id === housingId);
     return (dataHousing.map((el) => (
 
-        <main>
+        <main key={Math.random()}>
             <Carousel dataHousing={el} />
 
-            <div className={style.info}>
+            <div className={style.info} key={Math.random()}>
                 <article className='description'>
                     <h1 className={style.title}>{el.title}</h1>
                     <p className={style.text}>{el.location}</p>
@@ -38,9 +38,9 @@ const Housing = () => {
                     <div className={style.containerStars}>< Rating ratingStars={el.rating} /></div>
                 </article>
             </div>
-            <div className={style.containerDropdown}>
-                <Dropdown title="Description" description={el.description} />
-                <Dropdown title="Équipements" liste={el.equipments} />
+            <div className={style.containerDropdown} key={Math.random()}>
+                <Dropdown title="Description" description={el.description} key={Math.random()} />
+                <Dropdown title="Équipements" liste={el.equipments} key={Math.random()} />
             </div>
 
 

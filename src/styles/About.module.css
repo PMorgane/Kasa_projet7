@@ -16,17 +16,18 @@
 
     width: 93%;
 }
+
 .mainDropdown {
     width: 80%;
     margin: 0 10%;
-  }
+}
 
 @media screen and (max-width: 408px) and (min-width:0px) {
     .Apropos {
-       width: 80%;
-       margin: 0 10%;
-      background-position: 50%;
-        background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(30, 29, 29, 0.325)),
+        width: 80%;
+        margin: 0 10%;
+        background-position: 50%;
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(30, 29, 29, 0.325)),
             url("../assets/bannerApropos.png");
         background-repeat: no-repeat;
 
@@ -35,8 +36,9 @@
 
     .imgApropos {
         display: none;
-    
-        
+
+
     }
+
 
 }

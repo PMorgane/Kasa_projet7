@@ -6,7 +6,7 @@ import Vector from "../assets/Vector.png";
 function Dropdown({ title, description, liste }) {
 
     const [open, setOpen] = useState(false);
-  
+
     return (
         <section className={style.description} id={`dropdown-${title}`}>
             <div className={style.header}>
@@ -21,10 +21,10 @@ function Dropdown({ title, description, liste }) {
                     description ? <div className={style.descriptionDropdown}>{description}</div>
                     :
 
-                open &&    liste &&
+                    open && liste &&
                     liste.map((el) => {
 
-                        return (<li className={style.liste} key={Math.random()}> {el}</li>)
+                        return (<div className={style.liste} key={Math.random()}> <li key={Math.random()}> {el}</li></div>)
                     })
 
             }

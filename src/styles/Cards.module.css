@@ -1,9 +1,9 @@
 .cards {
     background-color: #f6f6f6;
     border-radius: 25px;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 50px 60px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px 60px;
     padding: 55px 50px;
 }
 
@@ -14,13 +14,13 @@
     min-height: 340px;
     position: relative;
     cursor: pointer;
-   
+
 }
 
-.post :hover{
-    
-    color:#FF6060;
- }
+.post :hover {
+
+    color: #FF6060;
+}
 
 .imgCard {
     background: linear-gradient(180deg, #130303fd 0%, #f0e7e7f6 100%);
@@ -40,14 +40,15 @@
     margin-right: 20px;
     position: absolute;
 }
+
 @media screen and (min-width: 360px) and (max-width: 850px) {
-    .cards{
+    .cards {
         background-color: unset;
         gap: 20px 0;
         grid-template-columns: 1fr;
         padding: 0
     }
-    
+
     .post {
         min-height: 255px;
     }

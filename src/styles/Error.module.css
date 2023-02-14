@@ -1,5 +1,5 @@
 .error_main {
-   text-align: center;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,22 +8,23 @@
     margin: 120px 0;
 }
 
-.error_main > h1 {
+.error_main>h1 {
     font-size: 200px;
 }
+
 br {
     display: none;
 }
 
-.error_main > p {
+.error_main>p {
     margin: 20px;
     font-size: 36px;
     font-weight: 500;
-    
+
 }
 
 .error_main button {
-    margin: 100px;
+    margin-top: 100px;
     text-decoration: underline;
     color: #FF6060;
     line-height: 25px;
@@ -35,18 +36,23 @@ br {
 .error_main button:hover {
     cursor: pointer;
 }
+
 @media screen and (min-width: 0px) and (max-width: 1000px) {
-    .error_main > h1 {
+    .error_main>h1 {
         font-size: 122px;
     }
-    .error_main > p {
+
+    .error_main>p {
         font-size: 20px;
     }
+
     br {
         display: flex;
     }
+
     .error_main button {
         font-size: 13px;
+        width: 100%;
     }
 
 }
