@@ -28,11 +28,11 @@ const Carousel = ({ dataHousing }) => {
     console.log(numberPictures);
     return (
         <section className={style.Carousel}>
-            <div ><img className={style.VectorLeft} src={Vector} onClick={handleClickLeft} /></div>
+            {numberPictures > 1 && <div ><img className={style.VectorLeft} src={Vector} onClick={handleClickLeft} /></div>}
             <div className={style.imgCarousel}><img src={dataHousing.pictures[count - 1]} alt={dataHousing.title} />
                 <span className={style.compteur}>{count} / {numberPictures}</span>
             </div>
-            <div><img className={style.VectorRight} src={Vector} onClick={handleClickRigth} /></div>
+            {numberPictures > 1 && <div><img className={style.VectorRight} src={Vector} onClick={handleClickRigth} /></div>}
         </section>
     )
 }

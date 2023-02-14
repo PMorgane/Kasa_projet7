@@ -7,7 +7,7 @@ const Banner = () => {
     return (
         <div className={style.Banner}>
             <img src={imgBanner} alt="image banner paysage 1" />
-            <p>Chez vous,<br /> partout et ailleurs</p>
+            <p className={style.text}><span>Chez vous,</span> <span> partout et ailleurs</span></p>
 
         </div>
 
