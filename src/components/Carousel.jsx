@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import style from "../styles/Housing.module.css";
+
 import Vector from "../assets/Vector.png"
 import style from "../styles/Carousel.module.css";
 

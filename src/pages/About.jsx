@@ -1,8 +1,6 @@
 import React from "react";
 import style from "../styles/About.module.css";
 import imgApropos from "../assets/imgApropos.png";
-//import { useParams } from "react-router-dom";
-//import { useFetch } from "../components/hooks/useFetch";
 import Dropdown from "../components/Dropdown";
 
 function About() {

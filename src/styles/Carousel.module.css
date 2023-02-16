@@ -16,7 +16,7 @@
     bottom: 50%;
     cursor: pointer;
 
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 .VectorRight {
@@ -27,6 +27,7 @@
     right: 0;
     bottom: 50%;
     cursor: pointer;
+    transform: rotate(-90deg);
 
 }
 

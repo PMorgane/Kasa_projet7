@@ -1,12 +1,12 @@
-import React from "react";
+
 import style from "../styles/Housing.module.css";
 import { useFetch } from "../components/hooks/useFetch.jsx";
 import Carousel from "../components/Carousel";
 import Rating from "../components/Rating";
 import Dropdown from "../components/Dropdown.jsx";
 import Tags from "../components/Tags.jsx";
-import { useParams } from "react-router-dom";
-
+import { useParams, useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
 
 
 const Housing = () => {
@@ -14,8 +14,28 @@ const Housing = () => {
     const { data } = useFetch("../data.json");
     const { id } = useParams();
     const housingId = id;
-
     const dataHousing = data.filter((el) => el.id === housingId);
+    // hook pour la redirection error
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        // function qui verifie si la propriété est trouvée
+        function Verif() {
+            let iteratateID = 0;
+            data.map((el) => {
+                if (!(el.id === housingId)) {
+                    return (iteratateID = iteratateID + 1);
+                }
+                return null;
+            });
+            if (iteratateID >= 20) {
+                navigate("/error");
+            }
+        }
+        Verif();
+    }, [data, housingId, navigate]);
+
+    
     return (dataHousing.map((el) => (
 
         <main key={Math.random()}>

@@ -34,21 +34,21 @@ section {
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
-  width: 100%;
+  width: 25px;
   cursor: pointer;
   height: 15px;
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 
 .VectorOpen {
-  transform: rotate(-90deg);
+  transform: rotate(180deg);
 }
-
+/*
 .VectorTrue.true:hover {
   justify-content: start;
   transform: rotate(+90deg);
 
-}
+}*/
 
 
 .description {
